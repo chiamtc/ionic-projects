@@ -1,0 +1,20 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>The Users</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <button ion-button (click)="navigateSingleUser('Max')">User 'Max'</button>
+  <hr/>
+  <button ion-button (click)="navigateSingleUser('Anna')">User 'Anna'</button>
+  <hr/>
+  <button ion-button navPop>Go Back</button> <!-- another way to push and pop without .ts -->
+</ion-content>
+
+<ion-footer padding>
+  <p>The footer</p>
+</ion-footer>
