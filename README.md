@@ -6,3 +6,6 @@ The journey to learn ionic 2/3 with angular5
 
 ## quote-app/
 ### building simple CRUD operation app with quotes from famous people. Understanding Navbar, menu, alert, modal controllers & <ion-list> & <ion-card> & <ion-sliding> and working with angular 5
+
+## ionic-pt3/
+### exploring ionic component and API docs
