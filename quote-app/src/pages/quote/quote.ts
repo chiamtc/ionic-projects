@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {IonicPage, NavParams, ViewController} from 'ionic-angular';
+import {Quote} from "../../data/quote.interface";
 
-/**
- * Generated class for the QuotePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -14,12 +9,19 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'quote.html',
 })
 export class QuotePage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  passQuote :Quote;
+  //NavController - controsl the stack of page , push/pop etc etc
+  //ViewController - only controls the current active page
+  constructor(private viewController:ViewController, private navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad QuotePage');
+  ionViewDidLoad(){
+    this.passQuote = this.navParams.data;
+    console.log(this.passQuote);
+  }
+
+  onClose(remove = false){
+    this.viewController.dismiss(remove);//passing the data here to the beneath view (which the overlay appears on)
   }
 
 }
