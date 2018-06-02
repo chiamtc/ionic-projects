@@ -6,13 +6,13 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import {TouchEventComponent} from "../components/touch-event.component";
+import {ResetComponent} from "../components/reset.component";
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    TouchEventComponent
+    ResetComponent
   ],
   imports: [
     BrowserModule,

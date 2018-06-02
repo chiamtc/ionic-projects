@@ -7,6 +7,27 @@
 </ion-header>
 
 <ion-content padding>
+  <app-touch-event></app-touch-event>
+
+  <!------------------------>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-9 col-sm-9>A column</ion-col>
+      <ion-col>A column 2</ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-9 push-3>
+        1 of 2
+      </ion-col>
+      <ion-col col-3 pull-9>
+        2 of 2
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!------------------------>
   The world is your oyster.
   <button ion-button (click)="click()" color="secondary">
     Some button
@@ -30,15 +51,42 @@
     <ion-icon name="home"></ion-icon>
     Home
   </button>
-  <!-- <ion-list>
+   <ion-list>
      <ion-item>item 1</ion-item>
      <button ion-item>item with button</button>
-   </ion-list>-->
+   </ion-list>
+
+
   <ion-list>
     <ion-item>
       <ion-icon name="star" item-left></ion-icon>
-      A normal item
+      <h2>Some heading</h2>
+      <p>A normal item</p>
     </ion-item>
-    <button ion-item>a normal item</button>
   </ion-list>
+
+  <ion-item-group> <!-- ion-ITEM-group -->
+    <ion-item-divider>A</ion-item-divider>
+    <ion-item>Apples</ion-item>
+    <ion-item>Avocado</ion-item>
+    <ion-item-divider>B</ion-item-divider>
+    <ion-item>Bananas</ion-item>
+    <ion-item>Berries</ion-item>
+  </ion-item-group>
+
+  <ion-list>
+    <ion-list-header>Privacy</ion-list-header>
+    <ion-item>Tracking</ion-item>
+    <ion-item>Personal Images</ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-list-header>Sharing</ion-list-header>
+    <ion-item>With anyone</ion-item>
+    <ion-item>None</ion-item>
+  </ion-list>
+
+  <ion-list reorder="true" (ionItemReorder)="reorderItems($event)">
+    <ion-item *ngFor="let item of items">{{item}}</ion-item>
+  </ion-list>
+
 </ion-content>
